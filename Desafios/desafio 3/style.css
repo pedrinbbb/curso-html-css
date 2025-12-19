@@ -1,1 +1,66 @@
+
 @charset "UTF-8";
+*{
+    margin: 0px;
+    padding: 0px;
+}
+header{
+    color: white;
+    background-color: black;
+    text-align: center;
+    font-family: passion one;
+}
+header > h1{
+    padding-top: 50px;
+    font-variant: small-caps;
+    font-size: 8vw;
+}
+header > p{
+    padding-bottom: 50px;
+    font-size: 1em;
+}
+a{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+section{
+    font-family: sriracha;
+    font-size: 2.9vw;
+    padding: 10px;
+}
+section p, .imagem{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.normal{
+    background-color: rgb(255, 255, 255);
+}
+#img1{
+    background-color: cyan;
+    background-image: url(pacote-d012/imagens/background001.jpg);
+    background-position: right center;
+}
+#img2{
+    background-image: url(pacote-d012/imagens/background002.jpg);
+    background-position: right center;
+}
+.imagem > p{
+    background-color: rgba(0, 0, 0, 0.595);
+    display: inline-block;
+    padding: 10px;
+    color: white;
+    text-shadow: 1px 1px 5px black;
+}
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+
