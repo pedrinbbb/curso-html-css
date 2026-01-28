@@ -18,3 +18,17 @@ main{
     max-width: 1200px;
     margin: auto;
 }
+nav{
+    padding: 12px;
+    text-align: right;
+}
+nav a{
+    padding: 18px;
+    background-color: rgb(167, 167, 165);
+    margin: 0px;
+    text-decoration: none;
+}
+nav a:hover{
+    background-color: wheat;
+    text-decoration: underline;
+}
