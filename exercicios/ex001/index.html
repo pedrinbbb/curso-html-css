@@ -1,36 +1,100 @@
-<!--
-    ## IMPORTANTE ##
-    Você tem todo o direito de usar esse material 
-    para seu próprio aprendizado. Professores também 
-    podem ter acesso a todo o conteúdo e usá-los com 
-    seus alunos. Porém todos os que usarem esse 
-    material - seja para qual for a finalidade - deverão 
-    manter a referência ao material original, disponível 
-    em https://github.com/gustavoguanabara/html-css. Este 
-    material não poderá ser utilizado em nenhuma hipótese 
-    para ser replicada - integral ou parcialmente - 
-    por autores/editoras/instituições para criar livros 
-    ou apostilas, com finalidades de obter ganho financeiro 
-    com ele.
--->
-
 <!DOCTYPE html>
-<!-- Nesse exercício, veremos as formas como as cores podem ser representadas em seu estilo -->
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cores em CSS</title>
+  <meta charset="UTF-8">
+  <title>Pedido Online</title>
+  <style>
+    body { font-family: Arial; max-width: 600px; margin: auto; }
+    input, select, button { width: 100%; padding: 8px; margin: 5px 0; }
+    .hidden { display: none; }
+  </style>
 </head>
 <body>
-    <h1>Cores em CSS</h1>
-    <p>Para entender esse exercício, olhe bem atentamente o código fonte do arquivo.</p>
-    <h2 style="background-color: darkblue; color: white;">Este título está colorido usando cores por nome</h2>
-    <h2 style="background-color: #00008b; color: #ffffff;">Já esse está usando cores pelo código Hexadecimal</h2>
-    <h2 style="background-color: rgb(0, 0, 139); color: rgb(255, 255, 255);">Este outro está colorido usando códigos RGB (red, green, blue)</h2>
-    <h2 style="background-color: hsl(240, 100%, 27%); color: hsl(0, 0%, 100%);">Este outro aqui está usando códigos HSL (hue, saturation, light)</h2>
-    <p>As cores resultantes são exatamente as mesmas, mas o formato de representação muda conforme o padrão escolhido.</p>
-    <p>Também é possível usar transparência, usando o formato RGBA (red, green, blue, alpha)</p>
-    <h2 style="background-color: rgba(0, 0, 139, 0.5); color: white;">Nesse título, o fundo azul teve sua transparência configurada para 50%</h2>
+
+<h2>🧾 Dados Pessoais</h2>
+<input id="nome" placeholder="Nome">
+<input id="telefone" placeholder="Telefone">
+<input id="email" placeholder="Email (opcional)">
+
+<h2>📍 Endereço</h2>
+<input id="rua" placeholder="Rua">
+<input id="bairro" placeholder="Bairro">
+<input id="numero" placeholder="Número">
+<input id="referencia" placeholder="Ponto de referência">
+<input id="complemento" placeholder="Complemento">
+
+<h2>💳 Pagamento</h2>
+<select id="pagamento" onchange="opcoesPagamento()">
+  <option value="">Selecione</option>
+  <option value="Pix">Pix</option>
+  <option value="Cartão">Cartão</option>
+  <option value="Dinheiro">Dinheiro</option>
+</select>
+
+<div id="trocoDiv" class="hidden">
+  <input id="troco" placeholder="Troco para quanto?">
+</div>
+
+<div id="cartaoDiv" class="hidden">
+  <select id="tipoCartao">
+    <option value="">Crédito ou Débito</option>
+    <option value="Crédito">Crédito</option>
+    <option value="Débito">Débito</option>
+  </select>
+</div>
+
+<button onclick="enviarWhatsApp()">Finalizar Pedido</button>
+
+<script>
+function opcoesPagamento() {
+  let pagamento = document.getElementById("pagamento").value;
+  document.getElementById("trocoDiv").classList.add("hidden");
+  document.getElementById("cartaoDiv").classList.add("hidden");
+
+  if (pagamento === "Dinheiro") {
+    document.getElementById("trocoDiv").classList.remove("hidden");
+  }
+
+  if (pagamento === "Cartão") {
+    document.getElementById("cartaoDiv").classList.remove("hidden");
+  }
+}
+
+function enviarWhatsApp() {
+  let mensagem =
+`🧾 *NOVO PEDIDO*
+
+👤 *Cliente*
+Nome: ${nome.value}
+Telefone: ${telefone.value}
+Email: ${email.value || "Não informado"}
+
+📍 *Endereço*
+Rua: ${rua.value}
+Bairro: ${bairro.value}
+Número: ${numero.value}
+Referência: ${referencia.value}
+Complemento: ${complemento.value}
+
+💳 *Pagamento*
+Forma: ${pagamento.value}`;
+
+  if (pagamento.value === "Dinheiro") {
+    mensagem += `\nTroco para: ${troco.value}`;
+  }
+
+  if (pagamento.value === "Cartão") {
+    mensagem += `\nTipo: ${tipoCartao.value}`;
+  }
+
+  mensagem += `\n\n✅ Pedido finalizado. Aguardando confirmação.`;
+
+  let telefoneEmpresa = "85985677491"; // coloque o número da empresa aqui
+  let url = `https://wa.me/${telefoneEmpresa}?text=${encodeURIComponent(mensagem)}`;
+
+  window.open(url, "_blank");
+}
+</script>
+
 </body>
 </html>

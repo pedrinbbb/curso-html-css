@@ -1,0 +1,9 @@
+@charset "UTF-8";
+/* css paisagem */
+body{
+    background-image: url(img/cev-landscape.jpg);
+    background-position: left bottom;
+}
+h1{
+    text-align: center;
+}
