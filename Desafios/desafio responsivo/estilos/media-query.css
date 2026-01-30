@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+/* celular */
+@media screen and (min-width: 300px) and (max-width:500px){
+    nav{
+        display: block;
+        display: none;
+    }
+    main{
+        font-size: 0.9em;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+}
+@media screen and (min-width:501px) and (max-width: 1024px){
+    main{
+        max-width: 75%;
+        text-align: justify;
+        letter-spacing: 0px;
+    }
+}
+@media screen and (min-width:1025px) and (max-width: 1920px){
+    main{
+        max-width: 68%;
+        text-align: justify;
+        letter-spacing: 0px;
+    }
+}
