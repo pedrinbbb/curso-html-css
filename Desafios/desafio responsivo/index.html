@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desafio responsividade</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="stylesheet" href="estilos/style.css">
     <link rel="stylesheet" href="estilos/media-query.css">
 </head>
-<body>
+<body onresize="mudouTamanho()">
     <header>
         <h1>Meu Site</h1>
+        <span id="burguer" class="material-symbols-outlined" onclick="clickMenu()">menu</span>
         <nav>
-            <ul>
+            <ul id="itens">
                 <li><a href="#">opção 1</a></li>
                 <li><a href="#">opção 2</a></li>
                 <li><a href="#">opção 3</a></li>
@@ -26,6 +28,22 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error dolore nobis, quod quo fuga facere nam quae vitae nihil, aperiam sapiente enim perspiciatis ipsam totam beatae iste reiciendis nostrum necessitatibus.</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit delectus numquam in ratione omnis nihil voluptatem iusto laborum quaerat, quasi accusantium dolor repellendus commodi deserunt, facilis officia perferendis maxime consequatur!</p>
     </main>
-    
+    <script>
+        function mudouTamanho(){
+            if(window.innerWidth >= 500){
+                burguer.style.display = 'none'
+            }else{
+                burguer.style.display = 'block'
+            }
+        }
+        function clickMenu(){
+            if(itens.style.display == "block"){
+                itens.style.display = 'none'
+            }else{
+                itens.style.display = 'block'
+            }
+        }
+    </script>
+    <script src="javascript.js"></script>
 </body>
 </html>

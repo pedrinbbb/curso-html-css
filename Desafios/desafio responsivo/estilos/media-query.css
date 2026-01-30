@@ -2,9 +2,9 @@
 
 /* celular */
 @media screen and (min-width: 300px) and (max-width:500px){
-    nav{
-        display: block;
+    nav ul{
         display: none;
+        text-align: center;
     }
     main{
         font-size: 0.9em;

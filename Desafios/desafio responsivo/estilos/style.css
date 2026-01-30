@@ -13,18 +13,38 @@ header h1{
     text-align: center;
     padding-top: 12px;
 }
+span#burguer{
+    background-color: rgba(48, 48, 48, 0.719);
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 6px;
+}
+span#burguer:hover{
+    background-color: rgba(123, 159, 190, 0.178);
+    transition: 0.2s;
+    color: black;
+    cursor: pointer;
+}
 nav ul{
     display: flex;
     gap: 6px;
-    justify-content: center;
-}
-nav li, a{
-    text-decoration: none;
+    justify-content: left;
     list-style: none;
+}
+nav li{
+    text-decoration: none;
     padding: 8px;
     background-color: rgb(128, 128, 128);
     border-top: 1px solid black;
+}
+nav a{
+    text-decoration: none;
     color: white;
+}
+nav li:hover{
+    background-color: rgba(240, 248, 255, 0.212);
+    transition: 0.5s;
 }
 main{
     padding: 16px;
