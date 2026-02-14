@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div.container{
+        display: grid;
+        /* grid-template-columns: auto auto auto;
+        grid-template-rows: 100px 100px 100px ; */
+
+        
+        grid-template: repeat(3, 100px)/ 1fr 2fr 1fr 4fr; /*linha cima e baixo/ coluna esqueda direita*/
+
+        grid-gap:10px;
+        grid-auto-columns: 1fr;
+        grid-auto-rows: 100px;
+        place-items: normal;
+        place-content: normal;
+        
+
+
+
+
+
+
+
+        border: 2px solid rgb(0, 0, 0);
+    }
+    .item1{
+        border: 6px dashed gray;
+        background-color: blue;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="item1">
+            <p>A</p>
+        </div>
+        <div class="item1">
+            <p>B</p>
+        </div>
+        <div class="item1">
+            <p>C</p>
+        </div>
+        <div class="item1">
+            <p>D</p>
+        </div>
+        <div class="item1">
+            <p>E</p>
+        </div>
+        <div class="item1">
+            <p>F</p>
+        </div>
+        <div class="item1">
+            <p>G</p>
+        </div>
+        <div class="item1">
+            <p>H</p>
+        </div>
+        <div class="item1">
+            <p>I</p>
+        </div>
+        <div class="item1">
+            <p>I</p>
+        </div>
+    </div>
+</body>
+</html>
