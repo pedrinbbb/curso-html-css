@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div.container{
+        display: grid;
+        /* grid-template-columns: auto auto auto;
+        grid-template-rows: 100px 100px 100px ; */
+        height: 250px;
+
+        
+        grid-template: repeat(3, 50px)/ repeat(3, 100px);/*linha cima e baixo/ coluna esqueda direita*/
+
+        justify-content:space-between;
+        align-content: center;
+        
+
+
+        border: 2px solid rgb(0, 0, 0);
+    }
+    .item1{
+        justify-items: center;
+        border: 3px dashed gray;
+        background-color: blue;
+
+    }
+    .item12{
+        justify-items: center;
+        border: 3px dashed gray;
+        background-color: blue;
+        grid-column-start: 1;
+        grid-column-end: end;
+        grid-row-start: 1;
+    }
+    .item13{
+        justify-items: center;
+        border: 3px dashed gray;
+        background-color: blue;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end:4;
+
+    }
+    .item14{
+        justify-items: center;
+        border: 3px dashed gray;
+        background-color: blue;
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 2;
+        grid-row-end:4;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="item12">
+            <p>A</p>
+        </div>
+        <div class="item13">
+            <p>B</p>
+        </div>
+        <div class="item14">
+            <p>C</p>
+        </div>
+        
+
+    </div>
+</body>
+</html>
