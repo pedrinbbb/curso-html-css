@@ -8,33 +8,18 @@
 <style>
     .container{
         display: grid;
-        grid-template: repeat(3, 100px)/ repeat(4, 1fr);
+        grid-template: repeat(5, 100px)/ repeat(4, 1fr);
         border: 1px solid black;
     }
     .caixa1{
         background-color: red;
-        grid-row-start: 1;
-        grid-row-end: 2;
-        grid-column-start: 1;
-        grid-column-end:5;
-        text-align: center;
+        grid-area: 1 / 1 / 6 /3;
     }
     .caixa2{
-        background-color: rgb(107, 1, 1);
-        grid-row-start: 2;
-        grid-row-end: 4;
-        grid-column-start: 1;
-        grid-column-end: 3;
-        text-align: center;
+        background-color: yellow;
+        grid-area: 1 / 3 / 6 / 5;
     }
-    .caixa3{
-        background-color: rgb(151, 42, 42);
-        grid-row-start: 2;
-        grid-row-end: 4;
-        grid-column-start: 3;
-        grid-column-end: 5;
-        text-align: center;
-    }
+    
 </style>
 <body>
     <div class="container">
@@ -44,9 +29,7 @@
         <div class="caixa2">
             <p>caixa2</p>
         </div>
-        <div class="caixa3">
-            <p>Caixa3</p>
-        </div>
+        
         
 
     </div>

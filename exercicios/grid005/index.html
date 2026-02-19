@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .container{
+        display: grid;
+        grid-template: repeat(10, 100px)/ repeat(4, 1fr);
+        border: 2px solid black;
+        padding: 12px;
+    }
+    .topo{
+        border: 1px dashed rgb(0, 0, 0);
+        grid-area: 1 / 1 / span 1 / span 4;
+        text-align: center;
+    }
+    .menu{
+        border: 1px dashed rgb(0, 0, 0);
+        grid-area: 2 / 1 / span 1 / span 4;
+        text-align: center;
+    }
+    .principal{
+        border: 1px dashed rgb(0, 0, 0);
+        grid-area: 3 / 1 / span 5 / span 3;
+    }
+    .secundario{
+        border: 1px dashed black;
+        grid-area: 3 / 4 / span 5 / span 1;
+    }
+    .rodape{
+        border: 1px dashed black;
+        grid-area: 8 / 1 / span 1 / span 6;
+        text-align: center;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="topo">
+            <h1>topo</h1>
+        </div>
+        <div class="menu">
+            <h1>menu</h1>
+        </div>
+        <div class="principal">
+            <h1>principal</h1>
+        </div>
+        <div class="secundario">
+            <h1>Secundario</h1>
+        </div>
+        <div class="rodape">
+            <h1>rodape</h1>
+        </div>
+        
+        
+
+    </div>
+</body>
+</html>
