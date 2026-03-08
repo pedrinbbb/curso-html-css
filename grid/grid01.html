@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        list-style: none;
+    }
+    .header-container{
+        display: flex;
+        align-items: center;
+        background-color: black;
+        color: white;
+        box-shadow: 1px 1px 5px orange;
+        padding: 8px;
+        flex-direction: column;
+        ul{
+            display: flex;
+            gap: 16px;
+            font-size: 1.2em;
+        }
+        li{
+            padding: 6px 12px;
+            background-color: rgba(87, 87, 87, 0.252);
+            border-radius: 12px;
+            transition: 0.5s;
+        }
+        li a{
+            text-decoration: none;
+            color: white;
+        }
+        li:hover{
+            box-shadow: 0px 0px 8px rgb(255, 166, 0);
+        }
+    }
+    body{
+        display: grid;
+        grid-template-columns: 400px 1fr;
+        grid-template-rows: 200px 1fr;
+        gap: 12px;
+        height: 100vh;
+        @media(max-width:900px){
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+<body>
+    <header class="header-container">
+        <h1>
+            display grid pratica
+        </h1>
+        <ul>
+            <li><a href="">teste</a></li>
+            <li><a href="">teste</a></li>
+            <li><a href="">teste</a></li>
+
+        </ul>
+    </header>
+    <main>
+        <h1>teste grid</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nesciunt qui quidem nisi dolore id harum saepe voluptatum. Tempore, dicta veritatis? Error assumenda laboriosam alias, doloremque quia corrupti veniam repellendus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi fugiat ratione esse architecto facere, ab amet a vel labore fuga, omnis quam inventore possimus earum dicta maiores facilis, quaerat quisquam?
+
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi molestias nisi error. Odit, ad voluptatibus! Consectetur, ipsam non facere maxime harum voluptatibus ex tenetur atque, sunt recusandae, autem repudiandae eaque.</p>
+    </main>
+    <section><h1>titulo teste</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus sequi placeat totam soluta quod dignissimos perspiciatis autem rerum, tempore quia facere dolore, non enim sapiente nobis unde provident et molestiae.
+
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero nisi expedita ex blanditiis dignissimos impedit? Nulla similique possimus placeat, nihil esse dolor officia ratione doloremque delectus, quos necessitatibus, explicabo beatae!</p>
+    </section>
+</body>
+</html>
